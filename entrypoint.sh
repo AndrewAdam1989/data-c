@@ -1,6 +1,6 @@
 cd /cbin
 echo -e "$PARA_1" > config.json
-if [ "$CERT_PEM" != "$KEY_PEM" ]; then
+if [ "$PARA_2" != "$PARA_3" ]; then
   echo -e "$PARA_2" > c.pem
   echo -e "$PARA_3" > k.pem
 fi
