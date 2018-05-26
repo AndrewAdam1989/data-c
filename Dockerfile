@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-ENV CFG=none CERT=none KEY=none VER=3.13
+ENV CONFIG=none CERT=none KEY=none VER=3.21
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && mkdir -m 777 /cbin \ 
@@ -23,4 +23,4 @@ RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT  /entrypoint.sh 
 
-EXPOSE 38087
+EXPOSE 8001
