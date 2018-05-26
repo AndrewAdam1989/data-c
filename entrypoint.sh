@@ -1,5 +1,5 @@
 cd /cbin
-echo -e "$CFG" > config.json
+echo -e "$CONFIG" > config.json
 if [ "$CERT" != "$KEY" ]; then
   echo -e "$CERT" > cert.pem
   echo -e "$KEY" > key.pem
