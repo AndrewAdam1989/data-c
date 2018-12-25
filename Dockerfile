@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-ENV CONFIG=none CERT=none KEY=none VER=3.21
+ENV CONFIG=none CERT=none KEY=none VER=3.50
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && mkdir -m 777 /cbin \ 
