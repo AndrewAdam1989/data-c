@@ -6,14 +6,14 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && mkdir -m 777 /cbin \ 
  && cd /cbin \
  && curl -L -H "Cache-Control: no-cache" -o v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
- && unzip v2ray.zip \
- && mv /cbin/v2ray-v$VER-linux-64/v2ray /cbin/calc \
- && mv /cbin/v2ray-v$VER-linux-64/v2ctl /cbin/ \
- && mv /cbin/v2ray-v$VER-linux-64/geoip.dat /cbin/ \
- && mv /cbin/v2ray-v$VER-linux-64/geosite.dat /cbin/ \
+ && unzip -d /ZipTemp v2ray.zip \
+ && mv /cbin/ZipTemp/v2ray /cbin/calc \
+ && mv /cbin/ZipTemp/v2ctl /cbin/ \
+ && mv /cbin/ZipTemp/geoip.dat /cbin/ \
+ && mv /cbin/ZipTemp/geosite.dat /cbin/ \
  && chmod +x /cbin/calc \
  && rm -rf v2ray.zip \
- && rm -rf v2ray-v$VER-linux-64 \
+ && rm -rf ZipTemp \
  && chgrp -R 0 /cbin \
  && chmod -R g+rwX /cbin 
  
