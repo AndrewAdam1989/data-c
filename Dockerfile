@@ -18,6 +18,8 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && chgrp -R 0 /cbin \
  && chmod -R g+rwX /cbin 
  
+ADD config.json /cbin/
+
 ADD entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh 
