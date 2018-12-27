@@ -13,6 +13,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && mv /cbin/ZipTemp/geoip.dat /cbin/ \
  && mv /cbin/ZipTemp/geosite.dat /cbin/ \
  && chmod +x /cbin/calc \
+ && chmod +x /cbin/v2ctl \
  && rm -rf v2ray.zip \
  && rm -rf ZipTemp \
  && chgrp -R 0 /cbin \
